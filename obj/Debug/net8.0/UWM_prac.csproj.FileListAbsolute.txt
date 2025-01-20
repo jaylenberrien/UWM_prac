@@ -1,0 +1,14 @@
+C:\Code\UWM_prac\bin\Debug\net8.0\UWM_prac.exe
+C:\Code\UWM_prac\bin\Debug\net8.0\UWM_prac.deps.json
+C:\Code\UWM_prac\bin\Debug\net8.0\UWM_prac.runtimeconfig.json
+C:\Code\UWM_prac\bin\Debug\net8.0\UWM_prac.dll
+C:\Code\UWM_prac\bin\Debug\net8.0\UWM_prac.pdb
+C:\Code\UWM_prac\obj\Debug\net8.0\UWM_prac.GeneratedMSBuildEditorConfig.editorconfig
+C:\Code\UWM_prac\obj\Debug\net8.0\UWM_prac.AssemblyInfoInputs.cache
+C:\Code\UWM_prac\obj\Debug\net8.0\UWM_prac.AssemblyInfo.cs
+C:\Code\UWM_prac\obj\Debug\net8.0\UWM_prac.csproj.CoreCompileInputs.cache
+C:\Code\UWM_prac\obj\Debug\net8.0\UWM_prac.dll
+C:\Code\UWM_prac\obj\Debug\net8.0\refint\UWM_prac.dll
+C:\Code\UWM_prac\obj\Debug\net8.0\UWM_prac.pdb
+C:\Code\UWM_prac\obj\Debug\net8.0\UWM_prac.genruntimeconfig.cache
+C:\Code\UWM_prac\obj\Debug\net8.0\ref\UWM_prac.dll
