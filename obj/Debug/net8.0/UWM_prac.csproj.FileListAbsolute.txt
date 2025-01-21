@@ -12,3 +12,4 @@ C:\Code\UWM_prac\obj\Debug\net8.0\refint\UWM_prac.dll
 C:\Code\UWM_prac\obj\Debug\net8.0\UWM_prac.pdb
 C:\Code\UWM_prac\obj\Debug\net8.0\UWM_prac.genruntimeconfig.cache
 C:\Code\UWM_prac\obj\Debug\net8.0\ref\UWM_prac.dll
+C:\Code\UWM_prac\obj\Debug\net8.0\UWM_prac.sourcelink.json

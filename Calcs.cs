@@ -1,7 +1,9 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Runtime.InteropServices;
 using System.Security;
 
 // Exercise 2
@@ -14,12 +16,15 @@ using System.Security;
 //Median
 //Maximum
 
+// pseudocode first
+// have a reason for every change you are making
+
 namespace UWM_prac;
 class Calculations
 {
     List<int> numList = new List<int>()
     {
-        5,2,2,2,3,4,5
+        5,2,2,2,3,4,5,7
     };
 
     //Without LINQ
@@ -34,7 +39,6 @@ class Calculations
         }   
         
         Console.WriteLine(sum / listLen);
-
     }
 
     public void SumNum()
@@ -63,14 +67,35 @@ class Calculations
         };
     }
 
-    static void Main(string[] args)
+    public void Maximum()
     {
-        Calculations test = new Calculations();
-        
-        // test.AverageNum();
-        // test.SumNum();
-        test.Median();
+    
+        Stack<int> currentLargest = new Stack<int>();
+        currentLargest.Push(numList[0]);
+        for(int i = 1; i < numList.Count(); i++)
+        {
+            if(numList[i] < currentLargest.Peek())
+            {
+                continue;
+            }
+            else if(numList[i] >= currentLargest.Peek())
+            {
+                currentLargest.Push(numList[i]);
+            }
+        };
+
+        Console.WriteLine(currentLargest.Peek());
     }
+
+    // static void Main(string[] args)
+    // {
+    //     Calculations test = new Calculations();
+        
+    //     // test.AverageNum();
+    //     // test.SumNum();
+    //     // test.Median();
+    //     test.Maximum();
+    // }
     
 };
 
