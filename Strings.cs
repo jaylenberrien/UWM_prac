@@ -10,7 +10,10 @@
 
 
 using System;
+using System.Collections.Immutable;
+using System.ComponentModel;
 using System.Linq;
+using System.Reflection.PortableExecutable;
 
 namespace UWM_prac;
 
@@ -23,10 +26,10 @@ class Strings
     //NO LINQ
     public Boolean WordSearch()
     {
-        string guessWord = "khalifa";
+        string guessWord = "love";
         int letterChecker = 0;
 
-        for(int i = 0; i < listOfChars.Count(); i++)
+        for(int i = 0; i < listOfChars.Count() - 1; i++)
         {
             if(guessWord.Length == letterChecker)
             {   
@@ -47,11 +50,43 @@ class Strings
     }
 
 
+    public void Alphabetize()
+    {
+        //convert string to array
+        //use sort method on array
+        //convert array back to string
+        char[]chars = listOfChars.ToCharArray();
+        Array.Sort(chars);
+        String.Join("",chars);
+        Console.WriteLine(chars);
+
+        //decently effecient, it works though
+    }
+
+    public void reverseString()
+    {
+        //use a counter to iterate over the string backwards
+        //add each char to an array
+        //use join method to output it as a string
+
+        string word = "superword";
+        List<char> charHolder = new List<char>(); 
+        for(int i = word.Count() - 1; i > -1; i--)
+        {
+            charHolder.Add(word[i]);
+        };
+          
+        string reversedString = String.Join("", charHolder);
+        Console.WriteLine(reversedString);
+    } 
+
     static void Main(string[] args)
     {
         Strings test2 = new Strings();
 
-        test2.WordSearch();
+        // test2.WordSearch();
+        // test2.Alphabetize();
+        // test2.reverseString();
     }
 
 }
