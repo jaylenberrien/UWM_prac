@@ -80,13 +80,13 @@ class Strings
         Console.WriteLine(reversedString);
     } 
 
-    static void Main(string[] args)
-    {
-        Strings test2 = new Strings();
+    // static void Main(string[] args)
+    // {
+    //     Strings test2 = new Strings();
 
-        // test2.WordSearch();
-        // test2.Alphabetize();
-        // test2.reverseString();
-    }
+    //     // test2.WordSearch();
+    //     // test2.Alphabetize();
+    //     // test2.reverseString();
+    // }
 
 }
