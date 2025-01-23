@@ -49,6 +49,10 @@ class Strings
                       //plan more carefully when starting problem and when making changes, understand exactly what you are doing and what you are trying to accomplish.
     }
 
+    public void WordSearchLINQ()
+    {
+	    // we going to tyr
+    }
 
     public void Alphabetize()
     {
@@ -61,6 +65,15 @@ class Strings
         Console.WriteLine(chars);
 
         //decently effecient, it works though
+    }
+
+    public void AlphabetizeLINQ()
+    {
+        //not working yet
+        List<char> sortedLetters = listOfChars.ToList();
+        sortedLetters.OrderBy(c => c);
+        string finalString = String.Join("", sortedLetters);
+        Console.WriteLine(finalString);
     }
 
     public void reverseString()
@@ -80,13 +93,15 @@ class Strings
         Console.WriteLine(reversedString);
     } 
 
-    // static void Main(string[] args)
-    // {
-    //     Strings test2 = new Strings();
+    static void Main(string[] args)
+    {
+        Strings test2 = new Strings();
 
-    //     // test2.WordSearch();
-    //     // test2.Alphabetize();
-    //     // test2.reverseString();
-    // }
+        // test2.WordSearch();
+        // test2.Alphabetize();
+        // test2.reverseString();
+
+        test2.AlphabetizeLINQ();
+    }
 
 }

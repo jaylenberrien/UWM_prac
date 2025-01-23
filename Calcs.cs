@@ -135,19 +135,19 @@ class Calculations
 
     }
 
-    static void Main(string[] args)
-    {
-        Calculations test = new Calculations();
+    // static void Main(string[] args)
+    // {
+    //     Calculations test = new Calculations();
         
-        // test.AverageNum();
-        // test.SumNum();
-        // test.Median();
-        // test.Maximum();
-        // test.AverageNumLINQ();
-        // test.sumNumLINQ();
-        // test.MedianLINQ();
-        // test.MaximumLINQ();
-    }
+    //     // test.AverageNum();
+    //     // test.SumNum();
+    //     // test.Median();
+    //     // test.Maximum();
+    //     // test.AverageNumLINQ();
+    //     // test.sumNumLINQ();
+    //     // test.MedianLINQ();
+    //     // test.MaximumLINQ();
+    // }
     
 };
 
