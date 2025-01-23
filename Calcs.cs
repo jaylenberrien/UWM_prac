@@ -152,5 +152,16 @@ class Calculations
 };
 
 
+//feeling good about answers
+
+//things to work on
+
+//be able to explain every decision and all of the reasons behind the actions we are taking, if we cant explain it we shouldnt do it, testing things is a part of this
+//"know then do"
+//think about edge cases
+//be mindful of time and space complexity, try to find the most effecient solution we can think of in the moment
+//psuedocode and have a plan before we even start coding and before each change
+
+
 
 
