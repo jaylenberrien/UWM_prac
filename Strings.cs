@@ -14,6 +14,7 @@ using System.Collections.Immutable;
 using System.ComponentModel;
 using System.Linq;
 using System.Reflection.PortableExecutable;
+using System.Runtime.CompilerServices;
 
 namespace UWM_prac;
 
@@ -27,7 +28,7 @@ class Strings
     public void WordSearch()
     {
         string guessWord = "love";
-        int letterChecker = 0;
+        int letterChecker = 0; 
 
         for(int i = 0; i < listOfChars.Count() - 1; i++)
         {
@@ -43,13 +44,21 @@ class Strings
                 continue;
             }
         }
-
+        
         Console.WriteLine("false");
+<<<<<<< HEAD
                       //plan more carefully when starting problem and when making changes, understand exactly what you are doing and what you are trying to accomplish.
+=======
+        return false; //does not output anything to console at all
+        //plan more carefully when starting problem and when making changes, understand exactly what you are doing and what you are trying to accomplish.
+
+        //this method is ineffecient, we are going to figure out an effecient hash map solution instead; after we do it with LINQ methods
+>>>>>>> 0f5fb25155793e5f35d1343e6ce1b43355c9bd8e
     }
     
     public void WordSearchLINQ()
     {
+<<<<<<< HEAD
 	    //im concerned about edge cases
         //the main one that is on my mind is a word that has duplicate letters
         //soving it with that in mind could be done using a stack to see what letters we have and havent used
@@ -78,6 +87,9 @@ class Strings
             }    
         }
    
+=======
+        //we are going to figure out an effecient hash map solution. we are doing well
+>>>>>>> 0f5fb25155793e5f35d1343e6ce1b43355c9bd8e
     }
 
     public void Alphabetize()
@@ -96,11 +108,13 @@ class Strings
     public void AlphabetizeLINQ()
     {
         //not working yet
-        List<char> sortedLetters = listOfChars.ToList();
-        sortedLetters.OrderBy(c => c);
+        List<char> allLetters = listOfChars.ToList();
+        var sortedLetters = allLetters.OrderBy(c => c);
         string finalString = String.Join("", sortedLetters);
         Console.WriteLine(finalString);
     }
+
+
 
     public void reverseString()
     {
@@ -119,6 +133,7 @@ class Strings
         Console.WriteLine(reversedString);
     } 
 
+<<<<<<< HEAD
     // static void Main(string[] args)
     // {
     //     Strings test2 = new Strings();
@@ -129,5 +144,29 @@ class Strings
     //     test2.WordSearchLINQ();
     //     // test2.AlphabetizeLINQ();
     // }
+=======
+    public void reverseStringLINQ()
+    {
+        string word = "superword";
+        List<char> charList = new List<char>(word);
+        // charList = word.ToList();
+        charList.Reverse();
+        Console.WriteLine(String.Join("", charList));
+
+    }
+
+    static void Main(string[] args)
+    {
+        Strings test2 = new Strings();
+
+        // test2.WordSearch();
+        // test2.Alphabetize();
+        // test2.reverseString();
+
+        // test2.AlphabetizeLINQ();
+        // test2.reverseStringLINQ();
+        test2.WordSearchLINQ();
+    }
+>>>>>>> 0f5fb25155793e5f35d1343e6ce1b43355c9bd8e
 
 }
