@@ -14,6 +14,7 @@ using System.Collections.Immutable;
 using System.ComponentModel;
 using System.Linq;
 using System.Reflection.PortableExecutable;
+using System.Runtime.CompilerServices;
 
 namespace UWM_prac;
 
@@ -27,7 +28,7 @@ class Strings
     public Boolean WordSearch()
     {
         string guessWord = "love";
-        int letterChecker = 0;
+        int letterChecker = 0; 
 
         for(int i = 0; i < listOfChars.Count() - 1; i++)
         {
@@ -43,15 +44,17 @@ class Strings
                 continue;
             }
         }
-
+        
         Console.WriteLine("false");
         return false; //does not output anything to console at all
-                      //plan more carefully when starting problem and when making changes, understand exactly what you are doing and what you are trying to accomplish.
+        //plan more carefully when starting problem and when making changes, understand exactly what you are doing and what you are trying to accomplish.
     }
 
     public void WordSearchLINQ()
     {
-	    // we going to tyr
+        string cafe = "cafe";
+	    Stack<char> stack = new Stack<char>(cafe); 
+        Console.WriteLine(stack.Peek());
     }
 
     public void Alphabetize()
@@ -70,11 +73,13 @@ class Strings
     public void AlphabetizeLINQ()
     {
         //not working yet
-        List<char> sortedLetters = listOfChars.ToList();
-        sortedLetters.OrderBy(c => c);
+        List<char> allLetters = listOfChars.ToList();
+        var sortedLetters = allLetters.OrderBy(c => c);
         string finalString = String.Join("", sortedLetters);
         Console.WriteLine(finalString);
     }
+
+
 
     public void reverseString()
     {
@@ -93,6 +98,16 @@ class Strings
         Console.WriteLine(reversedString);
     } 
 
+    public void reverseStringLINQ()
+    {
+        string word = "superword";
+        List<char> charList = new List<char>(word);
+        // charList = word.ToList();
+        charList.Reverse();
+        Console.WriteLine(String.Join("", charList));
+
+    }
+
     static void Main(string[] args)
     {
         Strings test2 = new Strings();
@@ -101,7 +116,9 @@ class Strings
         // test2.Alphabetize();
         // test2.reverseString();
 
-        test2.AlphabetizeLINQ();
+        // test2.AlphabetizeLINQ();
+        // test2.reverseStringLINQ();
+        test2.WordSearchLINQ();
     }
 
 }
