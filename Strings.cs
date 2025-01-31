@@ -48,13 +48,13 @@ class Strings
         Console.WriteLine("false");
         return false; //does not output anything to console at all
         //plan more carefully when starting problem and when making changes, understand exactly what you are doing and what you are trying to accomplish.
+
+        //this method is ineffecient, we are going to figure out an effecient hash map solution instead; after we do it with LINQ methods
     }
 
     public void WordSearchLINQ()
     {
-        string cafe = "cafe";
-	    Stack<char> stack = new Stack<char>(cafe); 
-        Console.WriteLine(stack.Peek());
+        //we are going to figure out an effecient hash map solution
     }
 
     public void Alphabetize()
