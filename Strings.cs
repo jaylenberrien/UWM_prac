@@ -54,7 +54,7 @@ class Strings
 
     public void WordSearchLINQ()
     {
-        //we are going to figure out an effecient hash map solution
+        //we are going to figure out an effecient hash map solution. we are doing well
     }
 
     public void Alphabetize()
