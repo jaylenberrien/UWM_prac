@@ -10,11 +10,11 @@
         "projectUniqueName": "C:\\Code\\UWM_prac\\UWM_prac.csproj",
         "projectName": "UWM_prac",
         "projectPath": "C:\\Code\\UWM_prac\\UWM_prac.csproj",
-        "packagesPath": "C:\\Users\\Jaylen Berrien\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\jayle\\.nuget\\packages\\",
         "outputPath": "C:\\Code\\UWM_prac\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Jaylen Berrien\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\jayle\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -58,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

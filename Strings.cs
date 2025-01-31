@@ -24,7 +24,7 @@ class Strings
     string listOfChars = "khfallifeloverjkocsaohe";
 
     //NO LINQ
-    public Boolean WordSearch()
+    public void WordSearch()
     {
         string guessWord = "love";
         int letterChecker = 0;
@@ -34,7 +34,7 @@ class Strings
             if(guessWord.Length == letterChecker)
             {   
                 Console.WriteLine("true");
-                return true;
+                break;
             }
 
             if(guessWord[letterChecker] == listOfChars[i])
@@ -45,13 +45,39 @@ class Strings
         }
 
         Console.WriteLine("false");
-        return false; //does not output anything to console at all
                       //plan more carefully when starting problem and when making changes, understand exactly what you are doing and what you are trying to accomplish.
     }
-
+    
     public void WordSearchLINQ()
     {
-	    // we going to tyr
+	    //im concerned about edge cases
+        //the main one that is on my mind is a word that has duplicate letters
+        //soving it with that in mind could be done using a stack to see what letters we have and havent used
+        
+        string guessWord = "lozve";
+
+        Stack<char> charStack = new Stack<char>(guessWord);
+        for(int i = 0; i < listOfChars.Count(); i++)
+        {
+           
+            
+            if(charStack.Count!= 0 && i > listOfChars.Length)
+            {
+                Console.WriteLine("False");
+            }
+
+            if(charStack.Count() == 0)
+            {
+                Console.WriteLine("True");
+                break;
+            }
+
+            if(listOfChars.Contains(charStack.Peek()))
+            {
+                charStack.Pop();
+            }    
+        }
+   
     }
 
     public void Alphabetize()
@@ -93,15 +119,15 @@ class Strings
         Console.WriteLine(reversedString);
     } 
 
-    static void Main(string[] args)
-    {
-        Strings test2 = new Strings();
+    // static void Main(string[] args)
+    // {
+    //     Strings test2 = new Strings();
 
-        // test2.WordSearch();
-        // test2.Alphabetize();
-        // test2.reverseString();
-
-        test2.AlphabetizeLINQ();
-    }
+    //     // test2.WordSearch();
+    //     // test2.Alphabetize();
+    //     // test2.reverseString();
+    //     test2.WordSearchLINQ();
+    //     // test2.AlphabetizeLINQ();
+    // }
 
 }
