@@ -25,61 +25,62 @@ class Strings
     string listOfChars = "khfallifeloverjkocsaohe";
 
     //NO LINQ
-    public void WordSearch()
+    public Boolean WordSearch()
     {
-        string guessWord = "love";
-        int letterChecker = 0; 
-
-        for(int i = 0; i < listOfChars.Count() - 1; i++)
-        {
-            if(guessWord.Length == letterChecker)
-            {   
-                Console.WriteLine("true");
-                break;
-            }
-
-            if(guessWord[letterChecker] == listOfChars[i])
-            {
-                letterChecker++;
-                continue;
-            }
-        }
+        Dictionary<char, int> charList = new Dictionary<char, int>();
+        string guessWord = "life";
         
-        Console.WriteLine("false");
+        // we need to replace this portion of code below
+        //it is chaning the values based on the letters that is in listOfchars and not based off of guessword characters, that is why the second half wont work
+        //my impulse thought is to try to use a for loop and use the iteration variable, we will see though
+        foreach(char c in listOfChars)
+        {
+            
+            if(guessWord.ContainsKey(c))
+            {
+                charList[c]++;
+            }
+            else
+            {
+                charList.Add(c, 0);
+            }
+            
+            // Console.WriteLine(charList.Keys);
+            // Console.WriteLine(charList[c]);
+            
+        }
+
+       
+        foreach(var c in charList)
+        {
+            Console.Write(c);
+        }
+        // for(int i = 0; i < guessWord.Length; i++)
+        // {
+        //     if(charList.ContainsKey(guessWord[i]) && charList[guessWord[i]] > 0)
+        //     {
+        //         Console.WriteLine(charList[guessWord[i]]);
+        //         charList[guessWord[i]]--;
+        //         Console.WriteLine(charList[guessWord[i]]);
+        //     }
+        //     else
+        //     {   
+        //         Console.WriteLine("false");
+        //         return false;
+        //     }
+        // }
+
+        // Console.WriteLine("true");
+        return true;
+    
        // we are going to try a more effecient version with a hash map 
-        //plan more carefully when starting problem and when making changes, understand exactly what you are doing and what you are trying to accomplish.
     }
     
     public void WordSearchLINQ()
     {
-	    //im concerned about edge cases
-        //the main one that is on my mind is a word that has duplicate letters
-        //soving it with that in mind could be done using a stack to see what letters we have and havent used
-        
-        string guessWord = "lozve";
 
-        Stack<char> charStack = new Stack<char>(guessWord);
-        for(int i = 0; i < listOfChars.Count(); i++)
-        {
-           
-            
-            if(charStack.Count!= 0 && i > listOfChars.Length)
-            {
-                Console.WriteLine("False");
-            }
-
-            if(charStack.Count() == 0)
-            {
-                Console.WriteLine("True");
-                break;
-            }
-
-            if(listOfChars.Contains(charStack.Peek()))
-            {
-                charStack.Pop();
-            }    
-        }
      // we are going to try a more effecient version with a hash map 
+
     }
 
     public void Alphabetize()
@@ -143,7 +144,7 @@ class Strings
 
         // test2.AlphabetizeLINQ();
         // test2.reverseStringLINQ();
-        test2.WordSearchLINQ();
+        test2.WordSearch();
     }
 
 }
