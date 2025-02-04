@@ -30,49 +30,42 @@ class Strings
         Dictionary<char, int> charList = new Dictionary<char, int>();
         string guessWord = "life";
         
-        // we need to replace this portion of code below
-        //it is chaning the values based on the letters that is in listOfchars and not based off of guessword characters, that is why the second half wont work
-        //my impulse thought is to try to use a for loop and use the iteration variable, we will see though
+
         foreach(char c in listOfChars)
         {
             
-            if(guessWord.ContainsKey(c))
+            if(charList.ContainsKey(c))
             {
-                charList[c]++;
+                continue;
             }
             else
             {
                 charList.Add(c, 0);
             }
-            
-            // Console.WriteLine(charList.Keys);
-            // Console.WriteLine(charList[c]);
+
+            if(guessWord.Contains(c))
+            {
+                charList[c]++;
+            }
+            else
+            {
+                continue;
+            }
             
         }
 
-       
+       //used to see all of the keys and their values
         foreach(var c in charList)
         {
             Console.Write(c);
         }
-        // for(int i = 0; i < guessWord.Length; i++)
-        // {
-        //     if(charList.ContainsKey(guessWord[i]) && charList[guessWord[i]] > 0)
-        //     {
-        //         Console.WriteLine(charList[guessWord[i]]);
-        //         charList[guessWord[i]]--;
-        //         Console.WriteLine(charList[guessWord[i]]);
-        //     }
-        //     else
-        //     {   
-        //         Console.WriteLine("false");
-        //         return false;
-        //     }
-        // }
-
-        // Console.WriteLine("true");
+  
         return true;
     
+
+
+
+
        // we are going to try a more effecient version with a hash map 
     }
     

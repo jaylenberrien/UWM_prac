@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UWM_prac")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1ab9d197172ea70dd19fbf2e627ad8ac9909691a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bf1c287e5b7de4c10f64fc936d8bedb56d3a975f")]
 [assembly: System.Reflection.AssemblyProductAttribute("UWM_prac")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UWM_prac")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
