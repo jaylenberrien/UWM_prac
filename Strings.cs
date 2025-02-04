@@ -27,53 +27,50 @@ class Strings
     //NO LINQ
     public Boolean WordSearch()
     {
+       // we are going to try a more effecient version with a hash map 
+        
         Dictionary<char, int> charList = new Dictionary<char, int>();
-        string guessWord = "life";
+        string guessWord = "lllife";
         
 
         foreach(char c in listOfChars)
         {
             
-            if(charList.ContainsKey(c))
-            {
-                continue;
-            }
-            else
+            if(!charList.ContainsKey(c))
             {
                 charList.Add(c, 0);
             }
-
+        
             if(guessWord.Contains(c))
             {
                 charList[c]++;
+            }            
+        }
+
+        foreach(char c in guessWord)
+        {
+            if(charList.ContainsKey(c) && charList[c] > 0)
+            {
+                charList[c]--;
             }
             else
             {
-                continue;
+                Console.WriteLine("false");
+                return false;
             }
-            
         }
 
-       //used to see all of the keys and their values
-        foreach(var c in charList)
-        {
-            Console.Write(c);
-        }
-  
+        Console.WriteLine("true");
         return true;
     
-
-
-
-
-       // we are going to try a more effecient version with a hash map 
     }
     
     public void WordSearchLINQ()
     {
-
-     // we are going to try a more effecient version with a hash map 
-
+        string guessWord = "lllife";
+        
+        //I want to yell *figured out that this worked after making the No LINQ version, I brushed it off at the start because I thought it wouldnt work*
+        Console.WriteLine(listOfChars.Contains(guessWord));
     }
 
     public void Alphabetize()
@@ -137,7 +134,7 @@ class Strings
 
         // test2.AlphabetizeLINQ();
         // test2.reverseStringLINQ();
-        test2.WordSearch();
+        test2.WordSearchLINQ();
     }
 
 }
